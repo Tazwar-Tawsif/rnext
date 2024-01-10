@@ -1,19 +1,21 @@
 // catch DOM elements
-const button = document.getElementById("button");
-const price = document.getElementById("price");
-const total = document.getElementById("total");
+let addToCart = document.getElementById('addToCart');
+let totalPrice = document.getElementById('totalPrice');
+let currentPrice = document.getElementById('price');
 
 // state or data
-const productPrice = 5000;
-let totalPrice = 0;
+const price = 5000;
+let total = 0;
 
 // set product price initially
-price.innerText = `৳ ${productPrice}`;
-total.innerText = "Total: ৳ 0";
+totalPrice.innerText = `Total: ৳ ${total}`;
+currentPrice.innerText= `৳ ${price}`;
 
-button.addEventListener("click", () => {
-    totalPrice += productPrice;
+addToCart.addEventListener('click', ()=>{
+    total+=price;
+    totalPrice.innerText= `Total: ৳ ${total}`;
+})
 
     // update UI
-    total.innerText = `৳ ${totalPrice}`;
-});
+    
+
